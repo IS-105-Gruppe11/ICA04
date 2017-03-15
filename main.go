@@ -8,6 +8,9 @@ import (
 )
 
 func main() {
+
+  //arguments
+  arg1 := os.Args[1]
     // Open file for reading
     file1, err := os.Open("files/text1.txt")
     file2, err := os.Open("files/text2.txt")
@@ -27,6 +30,9 @@ func main() {
     if err != nil {
         log.Fatal(err)
     }
+
+
+
     fmt.Println("1")
     fmt.Println("Data as Unicode: %U\n", data1)
     fmt.Printf("Data as hex: %x\n", data1)
@@ -38,5 +44,27 @@ func main() {
     fmt.Printf("Data as hex: %x\n", data2)
     fmt.Printf("Data as string: %s\n", data2)
     fmt.Println("Number of bytes read:", len(data2))
+
+
+
+    }
+
+    func isLineshift() {
+
+    tekstfil := arg1
+    file1, err := os.Open("tekstfil")
+    data1, err := ioutil.ReadAll(file1)
+
+    for i := 0; i < len(data1); i++ {
+      if data1[i] == "\r\n" {
+        fmt.Println("Windows")
+      }
+      else {
+        fmt.Println("Mac")
+      }
+
+
+
+
 
 }
