@@ -28,11 +28,13 @@ func main() {
         log.Fatal(err)
     }
     fmt.Println("1")
+    fmt.Println("Data as Unicode: %U\n", data1)
     fmt.Printf("Data as hex: %x\n", data1)
     fmt.Printf("Data as string: %s\n", data1)
     fmt.Println("Number of bytes read:", len(data1))
     fmt.Println("")
     fmt.Println("")
+    fmt.Println("Data as Unicode: %U\n", data2)
     fmt.Printf("Data as hex: %x\n", data2)
     fmt.Printf("Data as string: %s\n", data2)
     fmt.Println("Number of bytes read:", len(data2))
