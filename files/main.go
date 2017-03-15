@@ -1,36 +1,55 @@
 package main
 
 import (
-	"bufio"
-	"bytes"
+	"fmt"
+	"io/ioutil"
 	"log"
 	"os"
+	"regexp"
 )
 
 func main() {
-	deepCompare("text1.txt", "text2.txt")
-}
-
-func deepCompare(text1, text2 string) bool {
-	sf, err := os.Open(text1)
+	file1, err := os.Open("files/text1.txt")
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	df, err := os.Open(text2)
+	file2, err := os.Open("files/text2.txt")
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	sscan := bufio.NewScanner(sf)
-	dscan := bufio.NewScanner(df)
-
-	for sscan.Scan() {
-		dscan.Scan()
-		if !bytes.Equal(sscan.Bytes(), dscan.Bytes()) {
-			return true
-		}
+	data1, err := ioutil.ReadAll(file1)
+	if err != nil {
+		log.Fatal(err)
 	}
 
-	return false
+	data2, err := ioutil.ReadAll(file2)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	match1, err := regexp.Match(`\r\n`, data1)
+	if err != nil {
+		log.Fatal(err)
+	}
+	match2, err := regexp.Match(`\r\n`, data2)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	text1Platform := "Windows"
+	if !match1 {
+		text1Platform = "Mac"
+	}
+
+	text2Platform := "Windows"
+	if !match2 {
+		text2Platform = "Mac"
+	}
+
+	fmt.Printf("Text1 is using %s line breaks\n", text1Platform)
+	fmt.Printf("Text2 is using %s line breaks\n", text2Platform)
+
+
 }
