@@ -39,4 +39,5 @@ func main() {
     fmt.Printf("Data as string: %s\n", data2)
     fmt.Println("Number of bytes read:", len(data2))
 
+
 }
