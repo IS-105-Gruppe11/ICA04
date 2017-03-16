@@ -10,11 +10,11 @@ import (
 
 func main() {
   arg1 := os.Args[1]
-  IsMacOrWin(arg1)
+  IsLineshiftMacOrWin(arg1)
 
 }
 
-func IsMacOrWin(filename string) {
+func IsLineshiftMacOrWin(filename string) {
 	file1, err := os.Open(filename)
 	if err != nil {
 		log.Fatal(err)
