@@ -37,7 +37,7 @@ func IsLineshiftMacOrWin(filename string) {
 	}
 
 
-	fmt.Printf("Text1 is using %s line breaks\n", text1Platform)
+	fmt.Printf("The textfile is using %s line breaks\n", text1Platform)
 
 
 }
