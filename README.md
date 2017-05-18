@@ -206,28 +206,14 @@ Bilde:
 http://imgur.com/a/OOCDG
 
 
+Følgende fakuliteter har denne huffmankoden
 
-Bokstav
-Fakultet
-Huffmankode
-A
-Helse og idrettsfag
-100
-B
-Humaniora og pedagogikk
-101
-C
-Kunstfag
-000
-D
-Teknologi og realfag
-01
-E
-Lærerutdanning
-001
-F
-Økonomi og samfunnsvitenskap
-11
+A: Helse og idrettsfag 100
+B: Humaniora og pedagogikk 101
+C: Kunstfag 000
+D: Teknologi og realfag 01
+E: Lærerutdanning 001
+F: Økonomi og samfunnsvitenskap 11
 
 
 d) 
