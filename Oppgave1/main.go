@@ -9,12 +9,12 @@ import (
 )
 
 func main() {
-	file1, err := os.Open("files/text1.txt")
+	file1, err := os.Open("text1.txt")
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	file2, err := os.Open("files/text2.txt")
+	file2, err := os.Open("text2.txt")
 	if err != nil {
 		log.Fatal(err)
 	}
