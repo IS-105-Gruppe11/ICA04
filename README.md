@@ -8,9 +8,10 @@ Les text1.txt og text2.txt vha. fileutils inn i “byte slices” og sammenlign 
 Tekstfil 1 er større enn tekstfil 2 fordi den har en karakter for carriage return “/r” (unicode: U+0013) i tillegg til line feed “/n”, mens tekstfil 2 har kun line feed. Dette gjør at tekstfilen for flere bytes (til sammen 4 bytes).
 Dette kommer av at tekstfil 1 er skrevet ved bruk av “CRLF” linjeskift metoden, som brukes på windows operativssystemer, mens tekstfil 2 er skrevet ved bruk av “LF” linjeskift, som brukes på Mac os X systemer.. 
 
+Bruk main.go som tester hvilken av tekstene som er windows eller mac sin metode for linjeskift.
 
-
-
+Bilde:
+http://imgur.com/a/3XLGg 
 
 
 
@@ -24,7 +25,8 @@ Bilde:
 
 Package regexp implements regular expression search. Bruker regexp for å søke etter lineshift \r\n på windows.  ioutil.ReadAll og os for å lese / åpne filene.  https://golang.org/pkg/regexp/
 
-https://github.com/IS-105-Gruppe11/ICA04/tree/Philip
+Bilde:
+http://imgur.com/a/JI0NO
 
 
 
@@ -32,17 +34,14 @@ https://github.com/IS-105-Gruppe11/ICA04/tree/Philip
 
 
 Oppgave 2a)
-Skriv et Golang program fileinfo.go​, som kan utføres fra kommandolinje. Programmet skal ta et argument, som skal være et filnavn. Stien til filnavnet kan være enten relativ eller absolutt. Kommandoet for å utføre programmet skal se slikt ut: 
+Skriv et Golang program fileinfo.go​, som kan utføres fra kommandolinje. Programmet skal ta et argument, som skal være et filnavn. Stien til filnavnet kan være enten relativ eller absolutt.
 
-
-
+Bruk main.go med filnavn som parameter, for å skrive ut filinformasjon.
 
 
 
 bilde:
-
-
-PS: Prøvde å kompilere på linux plattformen og kjøre “fileinfo -f files/text1.txt”, men fikk dette:
+http://imgur.com/a/rPtiM
 
 
 
@@ -50,8 +49,8 @@ Oppgave 2b)
 Forklar resultatet, som deres program returnerer for filene “/dev/stdin” og “/dev/ram0”, når det utføres i et Linux-miljø (i sky instansen). 
 
 
-
-
+Bilde:
+http://imgur.com/a/mEjD5
 
 ram0 viser mindre rettigheter, selv med administratorrettigheter. Filene er mindre en 1 byte. Begge filene er verken device files, dermed blir det heller ikke Unix character device eller Unix block device.
 
@@ -59,11 +58,8 @@ ram0 viser mindre rettigheter, selv med administratorrettigheter. Filene er mind
 
 Oppgave 2c
 
-svar:
-windows:
-
-
-linux:
+Bilde:
+http://imgur.com/a/xQMSx
 
 
 På windows systemet har filen text1.txt write rettigheter for “alle”, mens den ikke har det på linux systemet.
@@ -141,18 +137,15 @@ Oppgave 3b)
 Skriv programmer for alle type metoder for å lese og skrive til filer. Programmene skal lese inn en tekst-fil (flere middels store filer er i repository), skrive ut totalt antall linjer og antall for fem “runes” (bokstaver/tegn), som forekommer mest i disse filene. 
 
 
+Bruk main.go filene i oppgave 3 mappen.
+Copy : Kopierer en fil, og forteller hvor mange linjer som er i filen.
+Write : Oppretter en ny fil, for å så skrive bytes til den.
+Read : Leser hele filen, og gir informasjon om bytes.
+
 
 
 Oppgave 3c) 
 Lag benchmarks-tester for alle type metoder for lesing av fil. Forklar fordeler og ulemper for hver av disse metodene i forhold til oppgaven deres. Dere kan ha behov til å se mer på slices i Go: https://blog.golang.org/slices
-
-
-
-
-
-
-
-
 
 
 
@@ -164,42 +157,43 @@ Oppgave 4 a)
 Høstsemester 2014:
 UIAs fakultet
 Antall studenter (10539)
+
 Sannsynlighet
-Helse og idrettsfag
-1829
+Helse og idrettsfag:
+1829 studenter =
 17.346358118361152 %
-Humaniora og pedagogikk
-1525
+
+Humaniora og pedagogikk:
+1525 studenter =
 14.463201820940819 %
+
 Kunstfag
-420
+420 studenter =
 3.983308042488619 %
+
 Teknologi og realfag
-2166
+2166 studenter =
 20.54248861911988 %
+
 Lærerutdanningen
-1506
+1506 studenter =
 14.283004552352049 %
+
 Økonomi og samfunnsvitenskap
-3093
+3093 studenter =
 29.38163884673748 %
 
 b) 
 	
 Fakultet
-Informasjonsmengde
-Helse og Idrettsfag
-1829 = 11100100101
-Humaniora og pedagogikk
-1525 = 10111110101
-Kunstfag
-420 =   110100100
-Teknologi og realfag
-2166 = 100001110110
-Lærerutdanning
-1506 = 10111100010
-Økonomi og samfunnsvitenskap
-3093 = 110000010101
+Informasjonsmengde:
+
+Helse og Idrettsfag 1829 = 11100100101
+Humaniora og pedagogikk 1525 = 10111110101
+Kunstfag 420 =   110100100
+Teknologi og realfag 2166 = 100001110110
+Lærerutdanning 1506 = 10111100010
+Økonomi og samfunnsvitenskap 3093 = 110000010101
 
 
 
@@ -207,6 +201,9 @@ Lærerutdanning
 Vi kan se at om man får informasjon om en student fra Kunstfag får man minst informasjon. 
 
 c)
+
+Bilde:
+http://imgur.com/a/OOCDG
 
 
 
@@ -237,7 +234,7 @@ d)
 
 
 000 = 17  -  001 = 14  -  111 =  4  - 10 = 21   -110 = 14   -  01 = 29
-Gjennomsnittslengden for meldingen som inneholder fakultets koder for 100 tilfeldig valgte studenter blir på  250.
+Gjennomsnittslengden for meldingen som inneholder fakultets koder for 100 tilfeldig valgte studenter er lik 250
 
 
 
