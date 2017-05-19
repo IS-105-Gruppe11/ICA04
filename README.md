@@ -14,10 +14,10 @@ Younas, Osman
 
 		
 		
-													ICA 04 - Gruppe 11
+						ICA 04 - Gruppe 11
 
 
-														Oppgave 1a)
+						Oppgave 1a)
 Les text1.txt og text2.txt vha. fileutils inn i “byte slices” og sammenlign disse. Filene har tilsynelatende lik innhold, men hvorfor er den ene filen større enn den andre? Bortsett fra forskjeller i størrelsen, hvorfor må man være oppmerksom på dette “fenomenet”? 
 
 
@@ -31,7 +31,7 @@ http://imgur.com/a/3XLGg
 
 
 
-														Oppgave 1b)
+							Oppgave 1b)
 Skriv en funksjon, som finner ut hvilken kode for linjeskift en tekst-fil bruker. Dere skal selv finne eget navn for deres funksjoner, men programmet skal hete “lineshift.go”. Programmet skal kunne bli utført fra kommandolinje og returnere en eller annen type konklusjon. Programmet skal ta et som in-data. 
 
 
@@ -49,7 +49,7 @@ http://imgur.com/a/JI0NO
 
 
 
-														Oppgave 2a)
+							Oppgave 2a)
 Skriv et Golang program fileinfo.go​, som kan utføres fra kommandolinje. Programmet skal ta et argument, som skal være et filnavn. Stien til filnavnet kan være enten relativ eller absolutt.
 
 Bruk main.go med filnavn som parameter, for å skrive ut filinformasjon.
@@ -61,7 +61,7 @@ http://imgur.com/a/rPtiM
 
 
 
-														Oppgave 2b)
+							Oppgave 2b)
 Forklar resultatet, som deres program returnerer for filene “/dev/stdin” og “/dev/ram0”, når det utføres i et Linux-miljø (i sky instansen). 
 
 
@@ -72,7 +72,7 @@ ram0 viser mindre rettigheter, selv med administratorrettigheter. Filene er mind
 
 
 
-														Oppgave 2c)
+							Oppgave 2c)
 
 Bilde:
 http://imgur.com/a/xQMSx
@@ -84,7 +84,7 @@ På windows systemet har filen text1.txt write rettigheter for “alle”, mens 
 
 
 
-														Oppgave 3a)
+							Oppgave 3a)
 Klassifiser og forklar hvilken type metoder finnes det i Go for å jobbe med filer. 
 
 De grunnleggende metodene:
@@ -148,7 +148,7 @@ Diverse metoder
 
 
 
-														Oppgave 3b)
+							Oppgave 3b)
 
 Skriv programmer for alle type metoder for å lese og skrive til filer. Programmene skal lese inn en tekst-fil (flere middels store filer er i repository), skrive ut totalt antall linjer og antall for fem “runes” (bokstaver/tegn), som forekommer mest i disse filene. 
 
@@ -160,7 +160,7 @@ Read : Leser hele filen, og gir informasjon om bytes.
 
 
 
-														Oppgave 3c) 
+							Oppgave 3c) 
 Lag benchmarks-tester for alle type metoder for lesing av fil. Forklar fordeler og ulemper for hver av disse metodene i forhold til oppgaven deres. Dere kan ha behov til å se mer på slices i Go: https://blog.golang.org/slices
 
 
@@ -168,7 +168,7 @@ Lag benchmarks-tester for alle type metoder for lesing av fil. Forklar fordeler 
 
 
 
-														Oppgave 4a) 
+							Oppgave 4a) 
 
 Høstsemester 2014:
 UIAs fakultet
@@ -199,7 +199,7 @@ Lærerutdanningen
 3093 studenter =
 29.38163884673748 %
 
-														Oppgave4b) 
+							Oppgave4b) 
 	
 Fakultet
 Informasjonsmengde:
@@ -216,7 +216,7 @@ Lærerutdanning 1506 = 10111100010
 
 Vi kan se at om man får informasjon om en student fra Kunstfag får man minst informasjon. 
 
-														Oppgave4c)
+							Oppgave4c)
 
 Bilde:
 http://imgur.com/a/OOCDG
@@ -232,7 +232,7 @@ E: Lærerutdanning 001
 F: Økonomi og samfunnsvitenskap 11
 
 
-														Oppgave4d) 
+							Oppgave4d) 
 
 
 000 = 17  -  001 = 14  -  111 =  4  - 10 = 21   -110 = 14   -  01 = 29
